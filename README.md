@@ -63,3 +63,80 @@ if (xpHeroi < 1000) {
 
 // 4. Saída formatada esperada pelo avaliador
 console.log(`O Herói de nome ${nomeHeroi} está no nível de ${nivel}`);
+
+---
+
+# ⚔️ Desafio DIO - Calculadora de Partidas Rankeadas
+
+Este projeto foi desenvolvido como solução para o **segundo desafio de código da DIO (Digital Innovation One)**, focado no desenvolvimento de lógica de programação. O objetivo principal é praticar e consolidar a criação de funções, além da manipulação de variáveis, estruturas de repetição e condicionais.
+
+## 📋 Requisitos do Desafio da DIO
+
+O algoritmo foi estruturado utilizando os cinco pilares obrigatórios descritos na plataforma:
+1. **Variáveis**: Para armazenar dados de vitórias, derrotas, saldo acumulado e a classificação do herói.
+2. **Operadores**: Uso de operadores aritméticos para calcular o saldo (`vitórias - derrotas`), além de operadores relacionais e lógicos para definir os intervalos de classificação.
+3. **Laços de Repetição**: Implementação de uma estrutura de controle (`while`) para simular o processamento da análise de dados.
+4. **Estruturas de Decisão**: Uso de condicionais encadeadas (`if / else if / else`) para direcionar o herói ao nível correspondente com base nas vitórias.
+5. **Funções**: Criação de uma função especializada que recebe parâmetros de desempenho do jogador e retorna os resultados calculados.
+
+---
+
+## 🎚️ Tabela de Níveis e Classificação
+
+Os critérios de rankeamento baseiam-se na quantidade de **vitórias** do jogador:
+
+| Qtd. de Vitórias | Nível |
+| :--- | :--- |
+| Menor que 10 | Ferro |
+| Entre 11 e 20 | Bronze |
+| Entre 21 e 50 | Prata |
+| Entre 51 e 80 | Ouro |
+| Entre 81 e 90 | Diamante |
+| Entre 91 e 100 | Lendário |
+| Maior ou igual a 101 | Imortal |
+
+---
+
+## 💻 Código Desenvolvido
+
+```javascript
+// Desafio 2: Calculadora de Partidas Rankeadas
+
+// 1. Criação da função principal exigida pelo desafio
+function calcularNivel(vitorias, derrotas) {
+    // Cálculo do saldo de rankeadas
+    const saldoVitorias = vitorias - derrotas;
+    let nivel = "";
+
+    // 2. Estrutura de decisão para determinar o nível com base nas vitórias
+    if (vitorias < 10) {
+        nivel = "Ferro";
+    } else if (vitorias >= 11 && vitorias <= 20) {
+        nivel = "Bronze";
+    } else if (vitorias >= 21 && vitorias <= 50) {
+        nivel = "Prata";
+    } else if (vitorias >= 51 && vitorias <= 80) {
+        nivel = "Ouro";
+    } else if (vitorias >= 81 && vitorias <= 90) {
+        nivel = "Diamante";
+    } else if (vitorias >= 91 && vitorias <= 100) {
+        nivel = "Lendário";
+    } else {
+        nivel = "Imortal";
+    }
+
+    // Retorna um objeto com os valores necessários para a saída
+    return { saldoVitorias, nivel };
+}
+
+// 3. Laço de Repetição (Simulando uma lista de checagem ou múltiplas análises)
+let checagens = 0;
+while (checagens < 1) {
+    // Chamada da função passando os parâmetros (Vitórias, Derrotas)
+    const resultado = calcularNivel(85, 15); 
+
+    // 4. Exibição da mensagem de saída formatada exatamente como pedido pela DIO
+    console.log(`O Herói tem de saldo de ${resultado.saldoVitorias} está no nível de ${resultado.nivel}`);
+    
+    checagens++;
+}
