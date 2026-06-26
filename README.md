@@ -140,3 +140,46 @@ while (checagens < 1) {
     
     checagens++;
 }
+
+
+
+
+
+
+``` 🎮 Desafio DIO: Escrevendo as Classes de um Jogo
+
+Este repositório contém a resolução do desafio prático **"Escrevendo as classes de um Jogo"**, integrante da trilha de fundamentos de programação da **... (Digital Innovation One)**. O objetivo principal é aplicar os conceitos de **Programação Orientada a Objetos (POO)** utilizando JavaScript estruturado e limpo.
+
+---
+
+## 🎯 Objetivo do Desafio
+
+Criar uma classe genérica que represente um herói de uma aventura, contendo propriedades essenciais e um método dinâmico para simular uma ação de ataque com base na classe/tipo do personagem.
+
+### Requisitos de Dados:
+* **Nome** (`nome`)
+* **Idade** (`idade`)
+* **Tipo** (`tipo`) -> ex: *guerreiro, mago, monge, ninja*
+
+### Requisitos de Lógica (Método `atacar()`):
+O método deve emitir uma mensagem formatada de acordo com a tabela de correspondência abaixo:
+
+| Tipo | Descrição do Ataque | Mensagem de Saída Esperada |
+| :--- | :--- | :--- |
+| **Mago** | Magia | `o mago atacou usando magia` |
+| **Guerreiro** | Espada | `o guerreiro atacou usando espada` |
+| **Monge** | Artes Marciais | `o monge atacou usando artes marciais` |
+| **Ninja** | Shuriken | `o ninja atacou usando shuriken` |
+
+---
+
+## 🛠️ Tecnologias e Conceitos Utilizados
+
+Para a construção deste projeto, foram explorados os pilares fundamentais do desenvolvimento de software:
+
+* **Variáveis e Constantes:** Armazenamento seguro de dados do estado do objeto.
+* **Classes e Objetos (POO):** Estruturação do molde (`class Heroi`) e instanciação de múltiplos combatentes.
+* **Estruturas de Decisão (`switch/case`):** Fluxo condicional para mapeamento semântico do ataque correto.
+* **Manipulação de Strings:** Utilização de *Template Literals* para formatação limpa da saída do console.
+
+
